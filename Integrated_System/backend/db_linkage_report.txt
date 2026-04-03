@@ -1,0 +1,17 @@
+---USER-COUNSELOR LINKAGE DIAGNOSTIC---
+
+Counselor Users Found: 6
+- User: Jagath (jagathCounselor@gmail.com) | _id: 69a2ca86c1ce68bacfd30bd7
+- User: Tharindu Silva (tharindu.silva@gmail.com) | _id: 69bcdae27186cbcdffbe1161
+- User: Kavindi Fernando (kavindi.fernando@gmail.com) | _id: 69bce7af945bad16253464a7
+- User: Dhammika Perera (dhammika@counseling.com) | _id: 69c183b98a4bf2bcad339834
+- User: Tharushi De Silva (tharushi@test.com) | _id: 69c29a5e0eec3f13f86bd312
+- User: Namal Peris (namal@gmail.com) | _id: 69c75d3b89054088d9584cdc
+
+Counselor Profiles Found: 6
+- CounselorID: 69a2ca86c1ce68bacfd30bd9 | userId: 69a2ca86c1ce68bacfd30bd7 | Linked User: jagathCounselor@gmail.com
+- CounselorID: 69bcdae37186cbcdffbe1163 | userId: 69bcdae27186cbcdffbe1161 | Linked User: tharindu.silva@gmail.com
+- CounselorID: 69bce7af945bad16253464a9 | userId: 69bce7af945bad16253464a7 | Linked User: kavindi.fernando@gmail.com
+- CounselorID: 69c183b98a4bf2bcad339836 | userId: 69c183b98a4bf2bcad339834 | Linked User: dhammika@counseling.com
+- CounselorID: 69c29a5e0eec3f13f86bd314 | userId: 69c29a5e0eec3f13f86bd312 | Linked User: tharushi@test.com
+- CounselorID: 69c75d3c89054088d9584cde | userId: 69c75d3b89054088d9584cdc | Linked User: namal@gmail.com

@@ -1,0 +1,15 @@
+{
+  "name": "integrated-counseling-system",
+  "version": "1.0.0",
+  "description": "Unified Counseling Management System",
+  "main": "index.js",
+  "scripts": {
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "seed": "cd backend && node createAdmin.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

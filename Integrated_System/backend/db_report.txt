@@ -1,0 +1,32 @@
+---DATABASE DIAGNOSTIC REPORT---
+
+COLLECTIONS:
+- messages: 4 documents
+- users: 14 documents
+- appointments: 30 documents
+- counselors: 6 documents
+- specialties: 5 documents
+- feedbacks: 3 documents
+- waitlists: 1 documents
+- notifications: 22 documents
+
+SAMPLE USERS (last 5):
+- resandu@gmail.com | student | Resadu Thewmitha
+- namal@gmail.com | counselor | Namal Peris
+- IT23331136@my.sliit.lk | student | Kasuni
+- sayu@gmail.com | student | sayuri bhagya
+- tharushi@test.com | counselor | Tharushi De Silva
+
+SAMPLE COUNSELORS (last 5):
+- ID: 69a2ca86c1ce68bacfd30bd9 | UserID: 69a2ca86c1ce68bacfd30bd7
+- ID: 69bcdae37186cbcdffbe1163 | UserID: 69bcdae27186cbcdffbe1161
+- ID: 69bce7af945bad16253464a9 | UserID: 69bce7af945bad16253464a7
+- ID: 69c183b98a4bf2bcad339836 | UserID: 69c183b98a4bf2bcad339834
+- ID: 69c29a5e0eec3f13f86bd314 | UserID: 69c29a5e0eec3f13f86bd312
+
+SAMPLE APPOINTMENTS (last 5):
+- ID: 69a2cd0fc1ce68bacfd30c04 | Date: Fri Mar 06 2026 05:30:00 GMT+0530 (India Standard Time) | Status: completed
+- ID: 69bcd6a37186cbcdffbe1140 | Date: Sat Mar 28 2026 05:30:00 GMT+0530 (India Standard Time) | Status: approved
+- ID: 69bd391ea7a2c69b560cd8c7 | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time) | Status: approved
+- ID: 69c0191bac432a7aebce00d6 | Date: Fri Apr 03 2026 05:30:00 GMT+0530 (India Standard Time) | Status: cancelled
+- ID: 69c28bb0bc3b19f05a364288 | Date: Thu Mar 26 2026 05:30:00 GMT+0530 (India Standard Time) | Status: cancelled
