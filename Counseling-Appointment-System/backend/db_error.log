@@ -1,0 +1,3 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: ≡ƒöÉ encrypt with Dotenvx: https://dotenvx.com
+Server running in development mode on port 5000
+Error: connect ECONNREFUSED 127.0.0.1:27017
