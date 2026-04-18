@@ -39,6 +39,8 @@ const AdminUsers = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const [statusFilter, setStatusFilter] = useState('all');
+
     useEffect(() => {
         fetchMainData();
     }, []);
@@ -93,10 +95,18 @@ const AdminUsers = () => {
     const activeCount = users.filter(u => u.isActive).length;
     const totalCount = users.length;
 
-    const filteredUsers = users.filter(u => 
+   const filteredUsers = users.filter(u => {
+    const matchesSearch =
         (u.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (u.email || '').toLowerCase().includes(searchQuery.toLowerCase())
-    );
+        (u.email || '').toLowerCase().includes(searchQuery.toLowerCase());
+
+    const matchesStatus =
+        statusFilter === 'all' ||
+        (statusFilter === 'active' && u.isActive) ||
+        (statusFilter === 'inactive' && !u.isActive);
+
+    return matchesSearch && matchesStatus;
+});
 
     // Reset pagination when search changes
     useEffect(() => {
@@ -229,6 +239,15 @@ const AdminUsers = () => {
                         </div>
                         {/* Adding search strictly as requested though not fully prominent in current UI image, it's good for UX */}
                         <div style={s.actionRight}>
+                        <select 
+                            value={statusFilter} 
+                            onChange={(e) => setStatusFilter(e.target.value)}
+                            style={s.btnSecondary}
+                        >
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Suspended</option>
+                        </select>
                         </div>
                     </div>
 
