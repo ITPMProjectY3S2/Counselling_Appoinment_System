@@ -8,9 +8,9 @@ const Home = () => {
 
     const categories = ['All specialties', 'Anxiety', 'Relationships', 'Stress', 'PTSD'];
     const counselors = [
-        { name: 'Dr. Sarah Chen', specialty: 'Ph.D, Counseling Psychology', rating: 4.9, reviews: 235, bio: 'Specializes in anxiety, stress management and workplace burnout using cognitive...', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop' },
-        { name: 'Mark Thompson', specialty: 'LMFT, Couples Therapy', rating: 4.8, reviews: 184, bio: 'Expert in rebuilding communication and trust for couples at all stages of their relationship...', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop' },
-        { name: 'Dr. Elena Rodriguez', specialty: 'Psy.D, Trauma Specialist', rating: 5.0, reviews: 212, bio: 'Helping individuals overcome past trauma and build resilience through evidence-based...', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop' }
+        { name: 'Dr. Stephani', specialty: 'Ph.D, Counseling Psychology', rating: 4.9, reviews: 235, bio: 'Specializes in anxiety, stress management and workplace burnout using cognitive...', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop' },
+        { name: 'Dr. Samanthi Silva', specialty: 'LMFT, Couples Therapy', rating: 4.8, reviews: 184, bio: 'Expert in rebuilding communication and trust for couples at all stages of their relationship...', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop' },
+        { name: 'Dr. Upeksha Karunaratne', specialty: 'Psy.D, Trauma Specialist', rating: 5.0, reviews: 212, bio: 'Helping individuals overcome past trauma and build resilience through evidence-based...', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop' }
     ];
 
     const faqs = [
