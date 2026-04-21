@@ -1,0 +1,103 @@
+import express from 'express';
+import Feedback from '../models/Feedback.js';
+import Appointment from '../models/Appointment.js';
+import { protect, student, admin } from '../middleware/authMiddleware.js';
+
+const router = express.Router();
+
+// @desc    Get all feedback (Admin)
+// @route   GET /api/feedback
+// @access  Private/Admin
+router.get('/', protect, admin, async (req, res) => {
+    try {
+        // Deep populate to get student and counselor names
+        const feedbacks = await Feedback.find({})
+            .populate({
+                path: 'appointmentId',
+                populate: [
+                    { path: 'studentId', select: 'name email' },
+                    {
+                        path: 'counselorId',
+                        populate: { path: 'userId', select: 'name specialty' }
+                    }
+                ]
+            })
+            .sort({ createdAt: -1 });
+
+        res.json(feedbacks);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// @desc    Submit feedback for an appointment
+// @route   POST /api/feedback
+// @access  Private/Student
+router.post('/', protect, student, async (req, res) => {
+    try {
+        const { appointmentId, rating, comment } = req.body;
+
+        const appointment = await Appointment.findById(appointmentId);
+
+        if (!appointment) {
+            return res.status(404).json({ message: 'Appointment not found' });
+        }
+
+        if (String(appointment.studentId) !== String(req.user._id)) {
+            return res.status(401).json({ message: 'Not authorized for this appointment feedback' });
+        }
+
+        if (appointment.status !== 'completed') {
+            return res.status(400).json({ message: 'Can only submit feedback for completed appointments' });
+        }
+
+        const existingFeedback = await Feedback.findOne({ appointmentId });
+        if (existingFeedback) {
+            return res.status(400).json({ message: 'Feedback already submitted for this appointment' });
+        }
+
+        const feedback = new Feedback({
+            appointmentId,
+            rating,
+            comment
+        });
+
+        const createdFeedback = await feedback.save();
+        res.status(201).json(createdFeedback);
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// @desc    Get all feedback of the logged in student
+// @route   GET /api/feedback/myfeedbacks
+// @access  Private/Student
+router.get('/myfeedbacks', protect, student, async (req, res) => {
+    try {
+        const myAppointments = await Appointment.find({ studentId: req.user._id }).select('_id');
+        const appointmentIds = myAppointments.map(a => a._id);
+        const feedbacks = await Feedback.find({ appointmentId: { $in: appointmentIds } });
+        res.json(feedbacks);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+// @desc    Get feedback for an appointment
+// @route   GET /api/feedback/:appointmentId
+// @access  Private
+router.get('/:appointmentId', protect, async (req, res) => {
+    try {
+        const feedback = await Feedback.findOne({ appointmentId: req.params.appointmentId });
+        if (feedback) {
+            res.json(feedback);
+        } else {
+            res.status(404).json({ message: 'Feedback not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+export default router;
