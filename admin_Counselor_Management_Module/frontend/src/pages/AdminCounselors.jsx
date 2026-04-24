@@ -29,6 +29,7 @@ const AdminCounselors = () => {
     const [sortBy, setSortBy] = useState('nameAsc');
     const location = useLocation();
     const navigate = useNavigate();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [showForm, setShowForm] = useState(false);
     const [specialties, setSpecialties] = useState([]);
@@ -98,22 +99,35 @@ const AdminCounselors = () => {
     };
 
     const handleCreateCounselor = async (e) => {
-        e.preventDefault();
-        if (!validateForm()) return;
-        try {
-            const payload = {
-                ...formData,
-                profileImage: formData.photoPreview
-            };
-            await api.post('/api/admin/counselors', payload);
-            setShowForm(false);
-            setFormData({ name: '', email: '', password: '', phone: '', specialty: '', photo: null, photoPreview: null, availableDays: ['Monday'], availableTimeSlots: ['09:00-10:00'] });
-            setFormErrors({});
-            fetchMainData();
-        } catch (error) {
-            alert(error.response?.data?.message || 'Error creating counselor');
-        }
-    };
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    try {
+        setIsSubmitting(true);
+
+        const payload = {
+            ...formData,
+            profileImage: formData.photoPreview
+        };
+
+        await api.post('/api/admin/counselors', payload);
+
+        setShowForm(false);
+        setFormData({
+            name: '', email: '', password: '', phone: '',
+            specialty: '', photo: null, photoPreview: null,
+            availableDays: ['Monday'],
+            availableTimeSlots: ['09:00-10:00']
+        });
+        setFormErrors({});
+        fetchMainData();
+
+    } catch (error) {
+        alert(error.response?.data?.message || 'Error creating counselor');
+    } finally {
+        setIsSubmitting(false);
+    }
+};
 
     const toggleStatus = async (userId, currentStatus) => {
         if (!userId) return;
@@ -370,9 +384,18 @@ const AdminCounselors = () => {
                                     </div>
                                 ))}
                                 <div style={{ gridColumn: '1/-1', marginTop: '1rem' }}>
-                                    <button type="submit" style={s.primaryBtnDark} gridcolumn="1/-1">
+                                    {/* <button type="submit" style={s.primaryBtnDark} gridcolumn="1/-1">
                                         <Plus size={16} /> Submit
+                                    </button> */}
+
+                                    <button 
+                                        type="submit" 
+                                        style={s.primaryBtnDark} 
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? 'Saving...' : <><Plus size={16} /> Submit</>}
                                     </button>
+
                                 </div>
                             </form>
                         </div>

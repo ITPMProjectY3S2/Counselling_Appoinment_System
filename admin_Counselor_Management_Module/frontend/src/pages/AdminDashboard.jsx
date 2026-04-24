@@ -226,9 +226,12 @@ const AdminDashboard = () => {
 
 
 
-  const unreadCount = useMemo(() => {
-    return recentAlerts.filter(a => !readAlertIds.has(a._id)).length;
-  }, [recentAlerts, readAlertIds]);
+const unreadCount = useMemo(() => {
+  if (!recentAlerts?.length) return 0;
+  return recentAlerts.reduce((count, alert) => {
+    return readAlertIds.has(alert._id) ? count : count + 1;
+  }, 0);
+}, [recentAlerts, readAlertIds]);
 
   const handleNotificationClick = (alert) => {
     setReadAlertIds(prev => new Set(prev).add(alert._id));

@@ -30,7 +30,7 @@ const AdminSpecialties = () => {
     const [editingSpecialty, setEditingSpecialty] = useState(null);
     const [formData, setFormData] = useState({ name: '', sub: '', desc: '' });
     const [errors, setErrors] = useState({});
-
+    const [saving, setSaving] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -129,40 +129,48 @@ const AdminSpecialties = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!validateForm()) return;
+    e.preventDefault();
+    if (!validateForm()) return;
 
-        try {
-            if (editingSpecialty) {
-                const payload = { name: formData.name, sub: formData.sub, desc: formData.desc };
-                const res = await api.put(`/api/admin/specialties/${editingSpecialty._id}`, payload);
-                setSpecialties(specialties.map(s => s._id === editingSpecialty._id ? res.data : s));
-            } else {
-                // Assign a random color aesthetic to match the design style
-                const themes = [
-                    { color: '#5eceea', iconColor: '#14b8a6', icon: 'mind' },
-                    { color: '#bfdbfe', iconColor: '#3b57f6', icon: 'heart' },
-                    { color: '#f0f0e2', iconColor: '#624769', icon: 'book' },
-                    { color: '#fef3c7', iconColor: '#d91406', icon: 'child' }
-                ];
-                const randTheme = themes[Math.floor(Math.random() * themes.length)];
+    setSaving(true); 
 
-                const payload = {
-                    name: formData.name,
-                    sub: formData.sub,
-                    desc: formData.desc,
-                    ...randTheme
-                };
+    try {
+        if (editingSpecialty) {
+            const payload = { name: formData.name, sub: formData.sub, desc: formData.desc };
+            const res = await api.put(`/api/admin/specialties/${editingSpecialty._id}`, payload);
 
-                const res = await api.post('/api/admin/specialties', payload);
-                setSpecialties([...specialties, res.data]);
-            }
-            closeModal();
-        } catch (e) {
-            console.error('Failed to save specialty', e);
-            alert('Failed to save specialty');
+            setSpecialties(
+                specialties.map(s => s._id === editingSpecialty._id ? res.data : s)
+            );
+        } else {
+            const themes = [
+                { color: '#5eceea', iconColor: '#14b8a6', icon: 'mind' },
+                { color: '#bfdbfe', iconColor: '#3b57f6', icon: 'heart' },
+                { color: '#f0f0e2', iconColor: '#624769', icon: 'book' },
+                { color: '#fef3c7', iconColor: '#d91406', icon: 'child' }
+            ];
+
+            const randTheme = themes[Math.floor(Math.random() * themes.length)];
+
+            const payload = {
+                name: formData.name,
+                sub: formData.sub,
+                desc: formData.desc,
+                ...randTheme
+            };
+
+            const res = await api.post('/api/admin/specialties', payload);
+            setSpecialties([...specialties, res.data]);
         }
-    };
+
+        closeModal();
+    } catch (e) {
+        console.error('Failed to save specialty', e);
+        alert('Failed to save specialty');
+    } finally {
+        setSaving(false); // ✅ ALWAYS stop saving
+    }
+};
 
     const filteredSpecs = specialties.filter(s => 
         (s.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -324,6 +332,7 @@ const AdminSpecialties = () => {
                                 <input 
                                     style={errors.name ? { ...s.input, borderColor: '#ef4444' } : s.input} 
                                     placeholder="e.g. Mental Health"
+                                     disabled={saving}
                                     value={formData.name}
                                     onChange={e => handleChange('name', e.target.value)}
                                 />
@@ -335,6 +344,7 @@ const AdminSpecialties = () => {
                                     style={errors.sub ? { ...s.input, borderColor: '#ef4444' } : s.input} 
                                     placeholder="e.g. Primary Clinical Care"
                                     value={formData.sub}
+                                     disabled={saving}
                                     onChange={e => handleChange('sub', e.target.value)}
                                 />
                                 {errors.sub && <div style={s.errorText}>{errors.sub}</div>}
@@ -356,8 +366,24 @@ const AdminSpecialties = () => {
                                 {errors.desc && <div style={s.errorText}>{errors.desc}</div>}
                             </div>
                             <div style={s.modalFooter}>
-                                <button type="button" style={s.btnCancel} onClick={closeModal}>Cancel</button>
-                                <button type="submit" style={s.btnSave}>{editingSpecialty ? 'Update Specialty' : 'Save Specialty'}</button>
+                            <button 
+                                type="button" 
+                                style={s.btnCancel} 
+                                onClick={closeModal}
+                                disabled={saving}
+                            >
+                                Cancel
+                            </button> 
+                               <button 
+                                    type="submit" 
+                                    style={s.btnSave}
+                                    disabled={saving}
+                                >
+                                    {saving 
+                                        ? 'Saving...' 
+                                        : (editingSpecialty ? 'Update Specialty' : 'Save Specialty')
+                                    }
+                                </button>
                             </div>
                         </form>
                     </div>
