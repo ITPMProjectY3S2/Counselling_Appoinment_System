@@ -1,0 +1,25 @@
+---DETAILED USER DIAGNOSTIC---
+
+Total Users: 14
+- admin@counseling.com | Role: admin | Name: System Admin | isActive: true | type of isActive: boolean
+- jagathCounselor@gmail.com | Role: counselor | Name: Jagath | isActive: true | type of isActive: boolean
+- pasanpasan42@gmial.com | Role: student | Name: Pasan Kalhara | isActive: true | type of isActive: boolean
+- kumodya@gmail.com | Role: student | Name: Kumodya | isActive: true | type of isActive: boolean
+- tharindu.silva@gmail.com | Role: counselor | Name: Tharindu Silva | isActive: true | type of isActive: boolean
+- kavindi.fernando@gmail.com | Role: counselor | Name: Kavindi Fernando | isActive: true | type of isActive: boolean
+- dhammika@counseling.com | Role: counselor | Name: Dhammika Perera | isActive: true | type of isActive: boolean
+- suranirodrigo14402@gmail.com | Role: student | Name: Surani Rodrigo | isActive: true | type of isActive: boolean
+- counselor@counselling.com | Role: student | Name: Nethra De Silva | isActive: true | type of isActive: boolean
+- tharushi@test.com | Role: counselor | Name: Tharushi De Silva | isActive: true | type of isActive: boolean
+- sayu@gmail.com | Role: student | Name: sayuri bhagya | isActive: true | type of isActive: boolean
+- IT23331136@my.sliit.lk | Role: student | Name: Kasuni | isActive: false | type of isActive: boolean
+- namal@gmail.com | Role: counselor | Name: Namal Peris | isActive: true | type of isActive: boolean
+- resandu@gmail.com | Role: student | Name: Resadu Thewmitha | isActive: true | type of isActive: boolean
+
+Total Counselors: 6
+- CounselorID: 69a2ca86c1ce68bacfd30bd9 | UserID: 69a2ca86c1ce68bacfd30bd7 | userId type: object
+- CounselorID: 69bcdae37186cbcdffbe1163 | UserID: 69bcdae27186cbcdffbe1161 | userId type: object
+- CounselorID: 69bce7af945bad16253464a9 | UserID: 69bce7af945bad16253464a7 | userId type: object
+- CounselorID: 69c183b98a4bf2bcad339836 | UserID: 69c183b98a4bf2bcad339834 | userId type: object
+- CounselorID: 69c29a5e0eec3f13f86bd314 | UserID: 69c29a5e0eec3f13f86bd312 | userId type: object
+- CounselorID: 69c75d3c89054088d9584cde | UserID: 69c75d3b89054088d9584cdc | userId type: object

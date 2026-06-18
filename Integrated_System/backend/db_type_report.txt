@@ -1,0 +1,9 @@
+---TYPE DIAGNOSTIC---
+
+Appointment 69a2cd0fc1ce68bacfd30c04:
+- studentId type: object | Is ObjectId: true
+- counselorId type: object | Is ObjectId: true
+- date type: object | Is Date: true
+
+Counselor 69a2ca86c1ce68bacfd30bd9:
+- userId type: object | Is ObjectId: true

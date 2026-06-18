@@ -1,0 +1,93 @@
+---APPOINTMENT LINKAGE DIAGNOSTIC---
+
+Total Appointments Found: 30
+- Appointment: 69a2cd0fc1ce68bacfd30c04 | Date: Fri Mar 06 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: pasanpasan42@gmial.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69bcd6a37186cbcdffbe1140 | Date: Sat Mar 28 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69bd391ea7a2c69b560cd8c7 | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69c0191bac432a7aebce00d6 | Date: Fri Apr 03 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69c28bb0bc3b19f05a364288 | Date: Thu Mar 26 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69c183b98a4bf2bcad339836
+- Appointment: 69c3710b45ee48418c8c2c17 | Date: Sat Apr 04 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c4c63be98e10c31386fab6 | Date: Sun Mar 29 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69bce7af945bad16253464a9
+- Appointment: 69c4e754e288b10f27dc4e21 | Date: Tue Mar 31 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69c4ead7e0f715c98489fc04 | Date: Fri Apr 03 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69c183b98a4bf2bcad339836
+- Appointment: 69c50e710eec3f13f86bd40e | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: counselor@counselling.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c54d1e4353c281772030fe | Date: Fri Apr 03 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: pasanpasan42@gmial.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69c54df44353c281772031ca | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: pasanpasan42@gmial.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69c586e0163d2d6e9560aac1 | Date: Thu Jun 25 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69bce7af945bad16253464a9
+- Appointment: 69c63a9c741ba5c68a374666 | Date: Sat Mar 28 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c63ab5741ba5c68a374672 | Date: Sun Mar 29 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c63aca741ba5c68a37467e | Date: Wed Apr 01 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c65354d441d655b8157a60 | Date: Sat Apr 04 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: pasanpasan42@gmial.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69c68b0d9de77edcdf647545 | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69c183b98a4bf2bcad339836
+- Appointment: 69c69547dd56a752b17f9288 | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c6955ddd56a752b17f9294 | Date: Fri Mar 27 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c69575dd56a752b17f92a0 | Date: Mon Mar 30 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c6958ddd56a752b17f92ac | Date: Tue Mar 31 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: sayu@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69c7442412e7e37f8939485f | Date: Sat Mar 28 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69c752dc12e7e37f89394954 | Date: Tue Mar 31 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69c754f40a6158a12e0fd43e | Date: Sat Apr 04 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: pasanpasan42@gmial.com
+  - Counselor: 69bce7af945bad16253464a9
+- Appointment: 69c757275ade003d74fcb9ef | Date: Tue Mar 31 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69c183b98a4bf2bcad339836
+- Appointment: 69c758f15ade003d74fcba54 | Date: Mon Mar 30 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69a2ca86c1ce68bacfd30bd9
+- Appointment: 69c75cee5ade003d74fcbaa4 | Date: Sun Mar 29 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69bcdae37186cbcdffbe1163
+- Appointment: 69ccc8f2f7384dc658a67df4 | Date: Thu Apr 02 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: suranirodrigo14402@gmail.com
+  - Counselor: 69c29a5e0eec3f13f86bd314
+- Appointment: 69ce0bd570aecca3cb2826a5 | Date: Fri May 29 2026 05:30:00 GMT+0530 (India Standard Time)
+  - Student: kumodya@gmail.com
+  - Counselor: 69c75d3c89054088d9584cde
